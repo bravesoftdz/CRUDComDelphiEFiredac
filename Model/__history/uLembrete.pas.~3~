@@ -1,0 +1,22 @@
+unit uLembrete;
+
+interface
+  uses
+    System.SysUtils;
+
+  type
+    TLembrete = class
+    private
+      FTitulo: string;
+      FDataHora: TDateTime;
+      FDescricao: string;
+      FIDLembrete: integer;
+      procedure SetDataHora(const Value: TDateTime);
+      procedure SetDescricao(const Value: string);
+      procedure SetIDLembrete(const Value: integer);
+      procedure SetTitulo(const Value: string);
+    end;
+
+implementation
+
+end.

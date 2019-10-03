@@ -1,0 +1,65 @@
+unit uLembreteDAO;
+
+interface
+
+uses
+  uLembrete, classes, DB, SysUtils, generics.defaults,
+  generics.collections, Dialogs, uDM, uBaseDAO, FireDAC.Comp.Client;
+
+type
+  TLembreteDAO = class(TBaseDAO)
+  private
+    FListaLembrete: TObjectList<TLembrete>;
+    procedure PreencherColecao(DS: TFDQuery);
+  public
+    constructor Create;
+    destructor Destroy; override;
+    function Inserir(pLembrete: TLembrete): boolean;
+    function Deletar(pLembrete: TLembrete): boolean;
+    function Alterar(pLembrete: TLembrete): boolean;
+    function ListarPorTitulo_Descricao(pConteudo: string): TObjectList<TLembrete>;
+  end;
+
+implementation
+
+{ TLembreteDAO }
+
+function TLembreteDAO.Alterar(pLembrete: TLembrete): boolean;
+begin
+
+end;
+
+constructor TLembreteDAO.Create;
+begin
+  inherited;
+  FListaLembrete := TObjectList<TLembrete>.Create;
+end;
+
+function TLembreteDAO.Deletar(pLembrete: TLembrete): boolean;
+begin
+
+end;
+
+destructor TLembreteDAO.Destroy;
+begin
+
+  inherited;
+end;
+
+function TLembreteDAO.Inserir(pLembrete: TLembrete): boolean;
+begin
+
+end;
+
+function TLembreteDAO.ListarPorTitulo_Descricao(
+  pConteudo: string): TObjectList<TLembrete>;
+begin
+
+end;
+
+procedure TLembreteDAO.PreencherColecao(DS: TFDQuery);
+begin
+
+end;
+
+end.
