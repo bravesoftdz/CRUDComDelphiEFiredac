@@ -1,0 +1,46 @@
+unit uFrmConsulta;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uDM, uLembreteDAO;
+
+type
+  TFrmConsulta = class(TForm)
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+  private
+    { Private declarations }
+    LembreteDAO : TLembreteDAO;
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmConsulta: TFrmConsulta;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFrmConsulta.FormCreate(Sender: TObject);
+begin
+  DM          := TDM.Create(Self);
+  LembreteDAO := TLembreteDAO.Create;
+end;
+
+procedure TFrmConsulta.FormDestroy(Sender: TObject);
+begin
+   try
+    if Assigned(LembreteDAO) then
+      FreeAndNil_LembreteDAO);
+    if Assigned(DM) then
+      FreeAndNil(DM);
+  except
+    on e: exception do
+      raise Exception.Create(E.Message);
+  end;
+end;
+
+end.

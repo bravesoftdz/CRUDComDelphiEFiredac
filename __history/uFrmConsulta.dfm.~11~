@@ -1,0 +1,82 @@
+object FrmConsulta: TFrmConsulta
+  Left = 0
+  Top = 0
+  Caption = 'Listar Registros'
+  ClientHeight = 343
+  ClientWidth = 635
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 312
+    Top = 192
+    Width = 31
+    Height = 13
+    Caption = 'Label1'
+  end
+  object Label2: TLabel
+    Left = 8
+    Top = 32
+    Width = 80
+    Height = 13
+    Caption = 'Buscar por T'#237'tulo'
+  end
+  object ListView1: TListView
+    Left = 4
+    Top = 58
+    Width = 623
+    Height = 248
+    Columns = <>
+    TabOrder = 0
+  end
+  object edtBuscar: TEdit
+    Left = 94
+    Top = 29
+    Width = 452
+    Height = 21
+    TabOrder = 1
+  end
+  object btnBuscar: TButton
+    Left = 552
+    Top = 27
+    Width = 75
+    Height = 25
+    Caption = 'Buscar'
+    TabOrder = 2
+  end
+  object btnNovo: TButton
+    Left = 8
+    Top = 312
+    Width = 75
+    Height = 25
+    Caption = 'Novo'
+    TabOrder = 3
+    OnClick = btnNovoClick
+  end
+  object btnEditar: TButton
+    Left = 112
+    Top = 312
+    Width = 75
+    Height = 25
+    Caption = 'Editar'
+    TabOrder = 4
+    OnClick = btnEditarClick
+  end
+  object btnDeletar: TButton
+    Left = 552
+    Top = 312
+    Width = 75
+    Height = 25
+    Caption = 'Deletar'
+    TabOrder = 5
+  end
+end
