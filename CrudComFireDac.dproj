@@ -91,18 +91,20 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="uFrmConsulta.pas">
-            <Form>Form1</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="Model\uLembrete.pas">
-            <Form>Form3</Form>
+            <Form>FrmConsulta</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="DAO\uBaseDAO.pas"/>
         <DCCReference Include="uDM.pas">
-            <Form>DataModule1</Form>
+            <Form>DM</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="DAO\uLembreteDAO.pas"/>
+        <DCCReference Include="Model\uLembrete.pas"/>
+        <DCCReference Include="uFrmInserir.pas">
+            <Form>Form2</Form>
+            <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

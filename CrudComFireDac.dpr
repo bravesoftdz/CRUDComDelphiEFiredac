@@ -2,18 +2,20 @@ program CrudComFireDac;
 
 uses
   Vcl.Forms,
-  uFrmConsulta in 'uFrmConsulta.pas' {Form1},
-  uLembrete in 'Model\uLembrete.pas' {Form3},
+  uFrmConsulta in 'uFrmConsulta.pas' {FrmConsulta},
   uBaseDAO in 'DAO\uBaseDAO.pas',
-  uDM in 'uDM.pas' {DataModule1: TDataModule};
+  uDM in 'uDM.pas' {DM: TDataModule},
+  uLembreteDAO in 'DAO\uLembreteDAO.pas',
+  uLembrete in 'Model\uLembrete.pas',
+  uFrmInserir in 'uFrmInserir.pas' {Form2};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
-  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TFrmConsulta, FrmConsulta);
   Application.CreateForm(TDM, DM);
+  Application.CreateForm(TForm2, Form2);
   Application.Run;
 end.
